@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  background-color: #f2f2f2;
+  color: #2d3250;
+  font-family: "Roboto Slab";
+  font-size: 16px;
+}
+.flex {
+  display: flex;
+}
+.flex_row {
+  flex-direction: row;
+}
+.flex_column {
+  flex-direction: column;
+}
+
+header {
+  height: 50px;
+  width: 100%;
+  margin: auto 0;
+  padding: 0 10px;
+  background-color: #2d2d2d;
+  color: #f2f2f2;
+}
+
+.hero {
+  min-height: 100vh;
+  background-image: url("../images/charles-forerunner-3fPXt37X6UQ-unsplash.jpg");
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+}
+.hero_container {
+  background-color: rgba(45, 45, 45, 70%);
+  color: #f2f2f2;
+  width: 80%;
+  text-align: center;
+  border-radius: 10px;
+  border-color: #2d2d2d;
+  border-style: solid;
+}
+.hero_text {
+  font-size: 1.5rem;
+}
+.hero_text > h1 {
+  padding-bottom: .3em;
+  font-size: 4rem;
+}
+.hero_text > p {
+  padding-bottom: 1em;
+}
+.hero_text > button {
+  width: 30%;
+  align-self: center;
+  border-radius: 10px;
+  background-color: #2d2d2d;
+  color: #f2f2f2;
+  border-style: solid;
+  border-color: #f2f2f2;
+  margin-bottom: 1em;
+}
+
+nav {
+  height: 50px;
+  background-color: #2d2d2d;
+  color: #f2f2f2;
+  position: relative;
+}
+nav > .logo {
+  height: 100%;
+  align-items: center;
+}
+nav > .logo > img {
+  width: 10%;
+}
+nav > ul {
+  list-style: none;
+  width: 50%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+nav > ul > li {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-weight: 500;
+}
+#navbar.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+.mobile_menu_container {
+  width: fit-content;
+  position: relative;
+  justify-content: center;
+  margin-right: 4em;
+}
+.selected_state {
+  border-style: solid;
+  border-color: #2d3250;
+}
+.hamburger_menu {
+  display: none;
+}
+.mobile_nav {
+  padding: 1.5em;
+  background-color: #2d2d2d;
+  color: #f2f2f2;
+  position: absolute;
+  border-style: solid;
+  border-color: #2d3250;
+  top: 100%;
+  align-self: center;
+  display: none;
+}
+.mobile_nav > p {
+  margin-bottom: .2em;
+}
+.mobile_nav > p > a {
+  color: inherit;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+.mobile_nav > p > a:hover {
+  color: #d2d2d2;
+}
+.show_menu {
+  display: block;
+}
+
+.about {
+  padding: 1.2em;
+  align-items: center;
+}
+.about_text {
+  min-width: 40%;
+  text-align: left;
+  padding: 0 10px;
+}
+.about_text > h1 {
+  font-size: 4rem;
+}
+.about_text > p {
+  font-size: 1.5rem;
+}
+.about_img {
+  min-width: 60%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.services {
+  padding: 1em;
+}
+.services > img {
+  max-width: 60%;
+  border-radius: 10px;
+}
+.services_container {
+  text-align: center;
+  align-content: center;
+  padding: 1.5em;
+  min-width: 40%;
+}
+.services_container > h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+.service_card > p {
+  margin-bottom: 1em;
+}
+.service_card > .card_head > img {
+  max-width: 50px;
+  object-fit: cover;
+}
+.card_head {
+  align-items: center;
+  justify-content: center;
+}
+.card_head > h2 {
+  margin-left: .5em;
+  font-size: 2rem;
+}
+
+.contact {
+  text-align: center;
+  margin: 30px;
+  justify-content: center;
+}
+.contact_card {
+  align-items: center;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 5px;
+  border-color: #2d2d2d;
+  padding: 30px;
+  gap: 45px;
+  box-shadow: inset;
+}
+.contact_card > .email > h1 {
+  font-size: 4rem;
+}
+.contact_card > .email  > form {
+  max-width: 420px;
+  margin: 30px auto;
+}
+.name_input,
+.email_input,
+.text_input {
+  background-color: #d2d2d2;
+  border-style: solid;
+  border-color: #2d3250;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+.contact_btn {
+  border-radius: 10px;
+  background-color: #2d2d2d;
+  color: #f2f2f2;
+  border-style: solid;
+  border-color: #2d3250;
+  margin-top: 20px;
+}
+.careers > h2 {
+  font-size: 2rem;
+}
+
+footer {
+  width: 100%;
+  background-color: #2d2d2d;
+  color: #f2f2f2;
+  padding-bottom: 10px;
+}
+.footer_nav {
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer_nav > ul {
+  list-style: none;
+}
+.footer_nav > ul > li {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+.footer_nav > a {
+  width: fit-content;
+  display: contents;
+}
+.footer_nav > a > img {
+  width: 5%;
+}
+.copyright {
+  text-align: center;
+}
+.logo_foot {
+  display: flex;
+  align-items: center;
+}
+.logo_foot > img {
+  height: 50px;
+}
+
+li > a,
+button > a {
+  text-decoration: none;
+  color: inherit;
+  font-style: bold;
+}
+li > a:hover,
+button:hover {
+  color: #d2d2d2;
+}
+
+
+.LinkedIn {
+  border-color: #d2d2d2;
+}
+
+@media (width < 1013px) {
+  .about {
+    flex-direction: column;
+  }
+  .about .about_text {
+    text-align: center;
+    margin-bottom: 1em;
+  }
+
+  .services {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  nav.nav > ul {
+    display: none;
+  }
+  nav.nav > .mobile_menu_container > .hamburger_menu {
+    display: block;
+    max-height: 50px;
+  }
+
+  .footer_nav > ul {
+    display: none;
+  }
+
+  .contact_card {
+    flex-direction: column;
+  }
+}
+
+@media (width < 830px) {
+  .hero_text > h1 {
+    font-size: 2.5rem;
+  }
+
+  .card_head > h2 {
+    margin-left: 0;
+  }
+}
